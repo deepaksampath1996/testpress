@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
+    <script> 
+    $(document).ready(function(){
+    $("#.rb").click(function(){
+        $(".rb").show();
+        $(".rb").attr("disabled",true);
+    });   
+    });
+
+
+        // function getanswer()
+        // {
+        // document.getElementById("UserAnswer").innerHTML = "";
+        // var e = document.getElementsByTagName("input");
+        //     for(i=0;i<=e;i++)
+        //     {
+        //         if(e[i].type=="radio")
+        //         {
+        //             if(e[i].checked)
+        //             {
+        //                 document.getElementById("UserAnswer").innerHTML+="Q "+e[i].name + "the ans : "+e[i].value+"<br>";
+        //             }
+        //         }
+        //     }    
+        // }
+    </script>
+
+
+</head>
+<body>
+
+    <form action="submit" method="POST">
+        {% csrf_token %}
+            {% for question in questions %}
+               
+    
+            <div   class="select">
+                <h3> {{ question.id }} . {{ question.question }}</h3>
+                <input type = "radio" class="rb" name = "{{ question.id }}" >   a. {{ question.option1 }}<br><br>
+                <input type = "radio" class="rb" name = "{{ question.id }}" >   b. {{ question.option2 }}<br><br>
+                <input type = "radio" class="rb" name = "{{ question.id }}" >   c. {{ question.option3 }}<br><br>
+                <input type = "radio" class="rb" name = "{{ question.id }}" >   d. {{ question.option4 }}<br><br>
+                
+                <label id="corans" class= "rb"  style="display:none;  color:green;"><b>{{question.answer}}</b></label>
+                
+                
+            
+        
+                    
+                    
+            
+                
+            
+    
+                <br><br >
+    
+    
+    
+    
+    
+            </div>  
+    </form>    
+            {% endfor %}
+            
+    <br><br>
+        <a href="{% url 'result' %}">submit</a>
+        <input type="submit" class="btn btn-success" value="Submit" id="b1" onclick="getanswers()">
+        <br>
+
+        <b id="UserAnswer"></b>
+
+    
+
+</body>
+</html

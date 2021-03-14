@@ -1,0 +1,58 @@
+{% load static %}
+<html>
+<head>
+    <title>Simple Quiz App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+    $("#b1").click(function(){
+        $(".rb").show();
+        $(".rb").attr("disabled",true);
+    });
+    });
+    </script>
+
+
+</head>
+<body>
+<div class="space">
+    <div class="text">
+        {% for question in  questions %}
+        
+        
+        {{question.id}}.{{question.question}} ?<br><br>
+            
+            
+        <input type = "radio" class="text" name = {{question.id}} id="option1" value="{{question.option1}}">{{question.option1}}<br><br>
+            
+        
+        <input type = "radio" class="text" name = {{question.id}} id="option2" value="{{question.option2}}">{{question.option2}}<br><br>
+        
+            
+        <input type = "radio" class="text" name = {{question.id}} id="option3" value="{{question.option3}}">{{question.option3}}<br><br>
+            
+    
+        <input type = "radio" class="text" name = {{question.id}} id="option4" value="{{question.option4}}">{{question.option4}}<br><br>
+            
+
+            
+        <label  class="rb" style="display:none ; color : green"><b>ANSWER : {{question.answer}}</b></label><br><br>
+        
+    
+    
+
+
+        {% endfor %}
+        <input type="submit" class="btn btn-success" value="Submit for answer" id="b1" onclick="getanswers()">
+        <br><br>
+        <a href="{% url 'result' %}">submit for result</a>
+        <br><br>
+        </div>
+</div>
+</body>
+</html>
