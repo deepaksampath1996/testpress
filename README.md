@@ -18,7 +18,9 @@ created git repository
 pushed github to heroku and deployed to heroku
 
 Admin superuser 
+
 Username: deepak
+
 password : deepak
 
 *still learning
