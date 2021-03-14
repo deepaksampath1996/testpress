@@ -1,0 +1,24 @@
+body{
+    background-color: black;
+}
+
+.text{
+    color: white;
+}
+
+
+a{
+    text-decoration: none;
+    background-color: green;
+    padding: 10px,10px,10px,10px;
+    border:solid 2px green;
+    font-size: 25px;
+    color:white;
+    border-radius: 5px;
+
+}
+
+a:hover{
+    text-decoration: none;
+    color:white;
+}

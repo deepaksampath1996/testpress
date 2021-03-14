@@ -1,0 +1,20 @@
+body{
+    width: 95%;
+    background-color: black;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.head{
+    color: green;
+}
+
+a{
+    text-decoration:none;
+    padding: 10px,10px,10px,10px;
+    border:solid 2px green;
+    font-size: 40px;
+    color:white;
+    border-radius: 20px;
+
+}

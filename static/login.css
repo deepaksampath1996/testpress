@@ -1,0 +1,39 @@
+body{
+    width: 95%;
+    background-color: black;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.header{
+    color:green;
+} 
+
+.button{
+    text-decoration:none;
+    padding:5px,5px,5px,5px ;
+    border:solid 2px olivedrab;
+    font-size: 30px;
+    border-radius: 20px;
+    color: green;
+}
+
+a{
+    text-decoration:none;
+    padding:5px,5px,5px,5px ;
+    border:solid 2px olivedrab;
+    font-size: 30px;
+    color:green;
+    border-radius: 20px;
+
+}
+
+.message{
+    color: green;
+}
+
+.text{
+    width: 250px;
+    height: 25px;
+    border-radius: 30px;
+}
