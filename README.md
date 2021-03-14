@@ -1,17 +1,17 @@
 # TESTPRESS
 
 
-created login page #only registered user can login
+created login page       #only registered user can login
 
-created register page   #create new normal user and saved to database 
+created register page         #create new normal user and saved to database 
 
-restrict made for unauthorised user   #without login cant access the page by typing urls
+restrict made for unauthorised user         #without login cant access the page by typing urls
 
 used front end technologies
 
 created backend models
 
-created rest_api for quiz    #url/api to access api page
+created rest_api for quiz          #url/api to access api page
 
 created git repository 
 
